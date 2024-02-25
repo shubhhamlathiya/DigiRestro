@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Digirestro - Admin</title>
+</head>
+
+<body>
+<div id="app">
+    <div class="main-wrapper main-wrapper-1">
+        <%- include("nav-sidebar.ejs") %>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="section">
+                <div class="section-body">
+
+                    <div class="card">
+                        <form class="needs-validation" novalidate="">
+                            <div class="card-header">
+                                <h4>Update Subscription</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Subscription Name</label>
+                                    <input type="text" class="form-control" name="sname" id="sname" placeholder="Subscription Name" required="">
+                                    <div class="invalid-feedback">
+                                        What's Subscription Name?
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Subscription Time Duration</label>
+                                        <input type="text" class="form-control" name="stimeduration" id="stimeduration" placeholder="Subscription Time Duration" required=""
+                                               onkeypress="return (event.charCode > 47 && event.charCode < 58)" minlength="1" maxlength="2">
+                                        <div class="invalid-feedback">
+                                            What's Subscription Time Duration?
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Subscription Price</label>
+                                        <input type="text" class="form-control" name="sprice" id="sprice" placeholder="Subscription Price" required=""
+                                               onkeypress="return (event.charCode > 47 && event.charCode < 58)" minlength="4" maxlength="7">
+                                        <div class="invalid-feedback">
+                                            What's Subscription Price?
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Subscription Description</label>
+                                    <input type="text" class="form-control" name="sdecription" id="sdecription" placeholder="Subscription Description" required="">
+                                    <div class="invalid-feedback">
+                                        What's Subscription Description?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <input type="submit" class="btn btn-primary" name="update" id="update" value="Update Subscription">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+<!-- General JS Scripts -->
+<script src="assets/js/app.min.js"></script>
+<!-- Template JS File -->
+<script src="assets/js/scripts.js"></script>
+<!-- Custom JS File -->
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
